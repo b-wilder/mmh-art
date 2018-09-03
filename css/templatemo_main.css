@@ -48,11 +48,16 @@ img {
 }
 
 img.art-image {
+    background: url(loading.gif) 50% no-repeat;
     transition: 0.3s;
 }
 
 img.art-image:hover {
   opacity: 0.7;
+  cursor: url('../images/buy_now.png'), pointer;
+}
+
+img.art-image-view-only:hover {
   cursor: zoom-in;
 }
 

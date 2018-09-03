@@ -21,6 +21,7 @@ jQuery(function($) {
 		$("#responsive").toggle();
 	});
 
+
         // copy menu list to responsive menu
         var mainMenuList = $('#menu-list').html();
         $('#responsive').html(mainMenuList);
@@ -68,6 +69,13 @@ jQuery(function($) {
                     });
                 });
 
+                $(".lazy-load").each(function (index, element) {
+                    var img = new Image();
+                    img.src = $(element).data("lazy-load-image");
+                    if (typeof $(element).data("image-classname" !== "undefined"))
+                        img.className = $(element).data("image-classname");
+                    $(element).append(img);
+                });
             }
             return;
 	});
