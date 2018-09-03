@@ -1,0 +1,26 @@
+{
+  "name": "mmh-art",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/b-wilder/mmh-art.git"
+  },
+  "author": "Brock W. Elgart",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/b-wilder/mmh-art/issues"
+  },
+  "homepage": "https://github.com/b-wilder/mmh-art#readme",
+  "devDependencies": {
+    "babel-loader": "^8.0.2",
+    "webpack": "^4.17.2"
+  }
+}
