@@ -34,7 +34,9 @@ jQuery(function($) {
                 return;
             }
 
-			e.preventDefault();
+			if($(this).attr('href').substr(0,1) == '#'){
+        e.preventDefault();
+      }
 
             if (menuDisabled == false) // check the menu has disabled?
             {
