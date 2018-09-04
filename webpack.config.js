@@ -24,7 +24,10 @@ module.exports = {
         use: [
           {
             loader: 'file-loader',
-            options: {}
+            options: {
+              name: '[path][name].[ext]',
+              context: ''
+            }
           }
         ]
       },
@@ -66,7 +69,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebPackPlugin({
-      inject: true,
+      inject: 'head',
       template: "./src/index.html",
       filename: "./index.html"
     }),
