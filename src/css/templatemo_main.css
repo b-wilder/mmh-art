@@ -1,0 +1,384 @@
+/*
+
+Nature Template
+
+http://www.templatemo.com/tm-398-nature
+
+*/
+
+body, html { overflow-x: hidden; }
+
+@font-face {
+  font-family: 'Imperator'; /* NOTE THIS LINE */
+  font-weight: normal; /* NOTE THIS LINE */
+  font-style: normal; /* NOTE THIS LINE */
+  src: url('../fonts/Imperator/Imperator.ttf');
+
+}
+
+@font-face {
+  font-family: 'Imperator'; /* NOTE THIS LINE */
+  font-weight: bold; /* NOTE THIS LINE */
+  font-style: normal; /* NOTE THIS LINE */
+  src: url('../fonts/Imperator/Imperator Bold.ttf');
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+    font-family: 'Imperator', sans-serif;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+    -webkit-text-size-adjust: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, span, p { font-family: 'Imperator', sans-serif; }
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+img.art-image {
+    background: url(loading.gif) 50% no-repeat;
+    transition: 0.3s;
+}
+
+img.art-image:hover {
+  opacity: 0.7;
+  cursor: url('../images/buy_now.png'), pointer;
+}
+
+img.art-image-view-only:hover {
+  cursor: zoom-in;
+}
+
+.img-column-full {
+  padding-right: 30px;
+}
+
+/* Preloader */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff; /* change if the mask should have another color then white */
+    z-index: 99; /* makes sure it stays on top */
+}
+
+#status {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%; /* centers the loading animation horizontally one the screen */
+    top: 50%; /* centers the loading animation vertically one the screen */
+    background-image: url(../images/status.gif); /* path to your loading animation */
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: -100px 0 0 -100px; /* is width and height divided by two */
+}
+
+/* General */
+#main-wrapper {
+     overflow: hidden;
+}
+
+.templatemo-site-title {
+    color: #fff !important;
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 1);
+	font-size: 48px;
+}
+
+.templatemo-site-title a, .templatemo-site-title a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+.img-row{
+    margin-top: 15px;
+}
+.img-row:first-child{
+    margin-top: 0;
+}
+
+img.slide {
+    width: 100%;
+    z-index: -9999999;
+    position: absolute;
+}
+
+img.event-image {
+    width: 100%;
+    height: auto;
+    padding:2px;
+    border:2px solid #5054B0;
+}
+
+.active {
+    display: block;
+}
+
+.inactive {
+    left: 703px;
+    width: 100%;
+    right: 0;
+    display: none;
+}
+
+.image-section {
+    position: fixed;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-container img {
+    position: absolute;
+}
+
+.templatemo-content {
+    position: fixed;
+    overflow: hidden;
+    //margin-top: 50%;
+    //transform: translateY(-50%);
+
+}
+
+.vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh;  /*These two lines are counted as one :-)*/
+
+    display: flex;
+    align-items: center;
+}
+
+.templatemo-content section {
+    font-family: 'Imperator', sans-serif;
+    position: relative;
+    overflow-y: scroll;
+    top: 0;
+    background-color: rgba(255,255,255,0.75);
+    padding-bottom: 20px;
+    height: 100vh;
+}
+
+
+.templatemo-content-wrapper {
+    overflow: hidden;
+}
+
+.templatemo-content h2 {
+    color: #000;
+}
+
+.templatemo-content p {
+    color: #000;
+    font-size: 18px;
+    text-indent: 25px;
+}
+
+#Address{
+    text-indent: 0;
+    margin-left: 25px;
+}
+
+.templatemo-content p.no-indent {
+    text-indent: 0;
+}
+
+.menu {
+    position: fixed;
+    width: 220px;
+    z-index: 1;
+    top: 35px;
+}
+
+#menu-list {
+    background-color: rgba(0, 0, 0,0.5);
+    font-size: 16px;
+    padding: 0;
+}
+
+#menu-list > li {
+    display: block;
+}
+
+
+#menu-list > li > a {
+    font-family: 'Imperator', sans-serif;
+    padding: 10px 0 10px 30px;
+    text-decoration: none;
+    display: block;
+    color: #fff;
+}
+
+#menu-list > .active > a,
+#menu-list > li > a:hover {
+    background-color: rgba(255,255,255,0.25);
+}
+
+
+#responsive {
+    font-size: 16px;
+    padding: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+
+#responsive li {
+    display: block;
+}
+
+#responsive li a {
+    font-family: 'Imperator', sans-serif;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 0;
+    display: block;
+}
+
+#responsive > .active > a,
+#responsive li a:hover {
+    background-color: rgba(0,0,0,0.5);
+}
+
+
+#loginForm{
+    height: 100%;
+}
+
+.templatemo-content {
+    padding-bottom: 6%;
+}
+
+.footer {
+    overflow: hidden;
+    position: fixed;
+    bottom: 10px;
+}
+
+.footer-text {
+    font-family: 'Imperator', sans-serif;
+    color: #fff;
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 1);
+    margin-left: 30px;
+    font-size: 14px;
+}
+
+.footer-text a, .footer-text a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+@media (min-width: 992px) {
+  .img-column:first-child img{
+    margin-left: 15px !important;
+  }
+
+  img.art-image {
+    width: 100%;
+  }
+
+  .img-row{
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: 991px) {
+    img.art-image {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    img.landscape {
+      height: 40vh;
+      width: auto;
+    }
+
+    img.portrait {
+      width: 40vh;
+      height: auto;
+    }
+
+    .img-row {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .footer {
+        overflow:hidden;
+        position: none;
+        text-align: center;
+        margin: auto auto 0 auto;
+        transform: translateY(75%);
+    }
+
+    .templatemo-content{
+        position: static;
+        overflow: hidden;
+        transform: none;
+    }
+
+    .templatemo-content section{
+        overflow-y: scroll;
+        height: 81%;
+        position: fixed;
+        margin-top: 19%;
+        margin-bottom: none;
+    }
+
+    body, html{
+        overflow: hidden;
+    }
+    a {
+        text-align: center;
+        margin: none;
+    }
+    li{
+        margin: none;
+        padding: none;
+    }
+    li:first-child a{
+        text-align: center;
+        margin: none;
+        transform: translateX(18px);
+    }
+    li:first-child{
+        margin: none;
+        padding: none;
+        display: inline-block;
+    }
+
+    .templatemo-site-title img{
+        float: right;
+
+    }
+
+    .col-sm-9.col-md-9{
+        text-align: justify;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    #line{
+        content: "";
+        display: block;
+        height: 1px;
+        width: 100%;
+        background:  black;
+    }
+    .row.img-row{
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+}
