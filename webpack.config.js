@@ -1,4 +1,6 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const webpack = require('webpack');
 module.exports = {
   module: {
     rules: [
@@ -18,7 +20,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|jpg|gif)$/,
+        test: /\.(png|jpg|gif|woff|eot|svg)$/,
         use: [
           {
             loader: 'file-loader',
@@ -29,8 +31,8 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          { loader: "style-loader" },
-          { loader: "css-loader" }
+          {loader: MiniCssExtractPlugin.loader},
+          "css-loader"
         ]
       },
       {
@@ -43,13 +45,23 @@ module.exports = {
               },
             },
           ]
-      }
+      }/*,
+      {
+        test: /^(templatemo_main|jquery\.backstretch\.min)\.js$/,
+        loader: 'imports?jQuery=jquery,$=jquery,this=>window'
+      }*/
     ]
   },
   plugins: [
     new HtmlWebPackPlugin({
+      inject: true,
       template: "./src/index.html",
       filename: "./index.html"
+    }),
+    new MiniCssExtractPlugin({filename:"styles.css"}),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
     })
   ]
 };
