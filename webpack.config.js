@@ -20,11 +20,23 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|jpg|gif|woff|eot|svg)$/,
+        test: /\.(png|jpg|gif)$/,
         use: [
           {
             loader: 'file-loader',
             options: {}
+          }
+        ]
+      },
+      {
+        test: /\.(woff|eot|svg)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'fonts/'
+            }
           }
         ]
       },
