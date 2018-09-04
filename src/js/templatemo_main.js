@@ -29,12 +29,10 @@ jQuery(function($) {
 
 
 			if(this.className == "external") {
-                return;
-            }
-
-			if($(this).attr('href').substr(0,1) == '#'){
-        e.preventDefault();
+        return;
       }
+
+			e.preventDefault();
 
             if (menuDisabled == false) // check the menu has disabled?
             {
