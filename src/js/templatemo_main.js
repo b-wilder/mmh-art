@@ -60,6 +60,7 @@ jQuery(function($) {
             // content slide in/out
             $("section.active").animate({left:$("section.active").outerWidth()}, 400,function(){
               imgDetails.removeClass("active");
+              imgDetails.addClass("inactive");
               imgDetails.hide();
               $(this).removeClass("active");
               $(this).hide();
@@ -122,6 +123,7 @@ jQuery(function($) {
             imgDetails.animate({left:imgDetails.outerWidth()}, 400,function(){
               activeSection.removeClass("active");
               activeSection.hide();
+              imgDetails.removeClass("inactive");
               imgDetails.show();
               imgDetails.animate({left:'0px'},400,function(){
                 imgDetails.addClass("active");
