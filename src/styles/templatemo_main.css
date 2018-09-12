@@ -53,10 +53,6 @@ img.art-image-view-only:hover {
   cursor: zoom-in;
 }
 
-.img-column-full {
-  padding-right: 30px;
-}
-
 /* Preloader */
 #preloader {
     position: fixed;
@@ -299,6 +295,10 @@ img.event-image {
 }
 
 @media (min-width: 992px) {
+  .img-column-full {
+    padding-right: 30px;
+  }
+  
   .img-column:first-child img{
     margin-left: 15px !important;
   }
@@ -321,8 +321,9 @@ img.event-image {
     }
 
     img.landscape {
-      height: 40vh;
+      max-height: 40vh;
       width: auto;
+      max-width: 100%
     }
 
     img.portrait {
@@ -373,7 +374,9 @@ img.event-image {
       display: inline;
     }
     img#img-detail-view.portrait{
-      height: 95%;
+      max-height: 95%;
+      max-width: 95%;
+      height: auto;
       width: auto;
       /*margin-top: 2.5vh;
       margin-bottom: 2.5vh;*/
