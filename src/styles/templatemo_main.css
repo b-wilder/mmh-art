@@ -356,6 +356,35 @@ img.event-image {
         margin-bottom: none;
     }
 
+    #img-details{
+      width: 100vw;
+    }
+
+    #img-detail-container{
+      height: 81vh;
+      line-height: 81vh;
+      width: 100vw;
+      text-align: center;
+    }
+    img#img-detail-view{
+      vertical-align: middle;
+      margin-top: auto;
+      margin-bottom: 0;
+      display: inline;
+    }
+    img#img-detail-view.portrait{
+      height: 95%;
+      width: auto;
+      /*margin-top: 2.5vh;
+      margin-bottom: 2.5vh;*/
+    }
+    img#img-detail-view.landscape{
+      width: 95%;
+      height: auto;
+      margin-left: 2.5%;
+      margin-right: 2.5%;
+    }
+
     body, html{
         overflow: hidden;
     }
