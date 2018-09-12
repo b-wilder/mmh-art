@@ -93,16 +93,27 @@ jQuery(function($) {
         {
             menuDisabled = true; // disable to menu
 
-            var imgSrc = $(this).find("img.art-img").attr("href");
+            var img = $(this).children("img.art-image");
+            var imgSrc = img.attr("src");
+            var imgClass;
+            if (img.hasClass("portrait")){
+              imgClass = "portrait";
+            }
+            else if (img.hasClass("landscape")){
+              imgClass = "landscape";
+            }
+            else{
+              imgClass = "";
+            }
             var imgDetails = $("#img-details");
             var imgElement = $("#img-details img");
-            var activeSection = $("section.active");
+            var activeSection = $("section.active[id$='-text']");
 
+            /*
             $('#menu-list li').removeClass('active');
             $('#responsive li').removeClass('active');
+            */
 
-
-            imgDetails.addClass("active");
             //  set active to both menu
             /*
             var menuClass = $(this).parent('li').attr('class');
@@ -119,11 +130,17 @@ jQuery(function($) {
             */
 
             // content slide in/out
-            imgElement.attr("href",imgSrc);
+            imgElement.attr("src",imgSrc);
+            imgElement.removeClass("portrait");
+            imgElement.removeClass("landscape");
+            if(imgClass.length > 0){
+              imgElement.addClass(imgClass);
+            }
             imgDetails.animate({left:imgDetails.outerWidth()}, 400,function(){
               activeSection.removeClass("active");
               activeSection.hide();
               imgDetails.removeClass("inactive");
+              imgDetails.addClass("active");
               imgDetails.show();
               imgDetails.animate({left:'0px'},400,function(){
                 imgDetails.addClass("active");
